@@ -80,6 +80,8 @@ const Bloglist = () => {
               <Image
                 src={blog.src}
                 alt={blog.title}
+                width={200}
+                height={300}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <span className="absolute bottom-3 right-3 bg-white text-black text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full shadow">
@@ -101,6 +103,8 @@ const Bloglist = () => {
                 <Image
                   src={blog.authorImg}
                   alt={blog.author}
+                  width={40}
+                  height={40}
                   className="w-6 h-6 sm:w-7 sm:h-7 rounded-full mr-2 object-cover"
                 />
                 <span>{blog.author}</span>
