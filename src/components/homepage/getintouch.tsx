@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
-import { useState } from "react";
+import * as React from "react";
 
 const GetInTouch = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = React.useState({
     name: "",
     email: "",
     message: "",
