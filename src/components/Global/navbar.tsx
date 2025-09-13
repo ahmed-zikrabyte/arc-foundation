@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full fixed top-0 left-0 bg-gray-200/55 backdrop-blur-md z-50 p-2">
+    <nav className="w-full fixed top-0 left-0 bg-gray-100/20 backdrop-blur-md z-50 p-2">
       <div className="w-full flex justify-between items-center px-4 sm:px-6 md:px-10 lg:px-16 py-2">
         {/* Logo → redirects to "/" */}
         <Link href="/" className="text-white text-xl sm:text-2xl font-bold">

@@ -162,18 +162,14 @@ const Bloglist = () => {
               "Frontend",
               "Backend",
               "AI",
-
               "Data Science",
-              "Frontend",
-              "Backend",
-              "AI",
               "Design",
               "Machine Learning",
               "Digital Marketing",
               "Cloud",
             ].map((cat) => (
               <button
-                key={cat}
+                key={cat} // safe since all unique ✅
                 className={`flex-shrink-0 px-4 py-2 text-sm rounded-full border transition ${
                   cat === "All"
                     ? "bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white shadow"
@@ -199,8 +195,11 @@ const Bloglist = () => {
                 <Image
                   src={blog.src}
                   alt={blog.title}
+                  width={400}
+                  height={300}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+
                 <span className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
                   {blog.tag}
                 </span>
@@ -217,11 +216,18 @@ const Bloglist = () => {
 
                 {/* Author */}
                 <div className="flex items-center mt-4 text-xs text-gray-500">
-                  <Image
-                    src={blog.authorImg}
-                    alt={blog.author}
-                    className="w-7 h-7 rounded-full mr-2 object-cover"
-                  />
+                  {/* Avatar Wrapper */}
+                  <div className="w-8 h-8 mr-2">
+                    <Image
+                      src={blog.authorImg}
+                      alt={blog.author}
+                      width={32}
+                      height={32}
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+
+                  {/* Author + Date */}
                   <span>{blog.author}</span>
                   <span className="mx-2">•</span>
                   <span>{blog.date}</span>
