@@ -106,15 +106,15 @@ const AboutUs = () => {
 
           {/* Stats */}
           <div className="flex flex-wrap gap-6 mt-4 w-full">
-            <div className="bg-white/90 text-gray-900 px-6 py-4 rounded-lg text-center shadow-md w-full sm:w-[48%] lg:w-auto">
+            <div className="bg-white/90 text-gray-900 px-6 py-4 rounded-lg text-center shadow-[0_4px_12px_rgba(94,59,238,0.15)] transition w-full sm:w-[48%] lg:w-auto">
               <h3 className="text-xl font-bold text-[#2563EB]">50K+</h3>
               <p className="text-sm">Students</p>
             </div>
-            <div className="bg-white/90 text-gray-900 px-6 py-4 rounded-lg text-center shadow-md w-full sm:w-[48%] lg:w-auto">
+            <div className="bg-white/90 text-gray-900 px-6 py-4 rounded-lg text-center shadow-[0_4px_12px_rgba(94,59,238,0.15)] transition w-full sm:w-[48%] lg:w-auto">
               <h3 className="text-xl font-bold text-[#2563EB]">200+</h3>
               <p className="text-sm">Courses</p>
             </div>
-            <div className="bg-white/90 text-gray-900 px-6 py-4 rounded-lg text-center shadow-md w-full sm:w-full lg:w-auto">
+            <div className="bg-white/90 text-gray-900 px-6 py-4 rounded-lg text-center shadow-[0_4px_12px_rgba(94,59,238,0.15)] transition w-full sm:w-full lg:w-auto">
               <h3 className="text-xl font-bold text-[#2563EB]">95%</h3>
               <p className="text-sm">Satisfaction</p>
             </div>
@@ -128,7 +128,7 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="flex gap-6 mt-6"
           >
-            <button className="group relative bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white px-6 py-3 rounded-lg shadow-md w-fit mx-auto md:mx-0 text-sm sm:text-base overflow-hidden">
+            <button className="cursor-pointer group relative bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white px-6 py-3 rounded-lg shadow-md w-fit mx-auto md:mx-0 text-sm sm:text-base overflow-hidden">
               {/* Default State */}
               <span className="flex items-center transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
                 Learn More
@@ -147,7 +147,7 @@ const AboutUs = () => {
             </button>
 
             <button
-              className="bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] bg-clip-text text-transparent
+              className="bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] bg-clip-text text-transparent cursor-pointer
              lg:text-[20px] md:text-[20px] sm:text-md text-md font-bold"
             >
               Watch Video

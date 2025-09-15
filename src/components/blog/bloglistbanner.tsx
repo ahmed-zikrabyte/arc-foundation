@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
 import { Avatar } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 
 const Bloglistbanner = () => {
+  const router = useRouter();
   const blogs = [
     {
       id: 1,
@@ -30,7 +31,7 @@ const Bloglistbanner = () => {
       {/* ✅ Hero Section with Next Image */}
       <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] flex flex-col justify-center items-center text-white">
         <Image
-          src="/bloglist/bloglistbg.png"
+          src="/bloglist/blogbanner.png"
           alt="Blogs background"
           fill
           priority
@@ -54,13 +55,16 @@ const Bloglistbanner = () => {
       {/* ✅ Latest Blogs Section */}
       {/* ✅ Latest Blogs Section */}
       {/* ✅ Latest Blogs Section */}
-      <div className="w-full mx-auto  px-4 sm:px-6 md:px-10 lg:px-16 py-8 sm:py-12 md:py-12">
+      <div className="w-full mx-auto cursor-pointer  px-4 sm:px-6 md:px-10 lg:px-16 py-8 sm:py-12 md:py-12">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-8">
           Latest <span className="text-purple-600">Blogs</span>
         </h2>
 
         {/* Always 2 cards in a row on md+ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          onClick={() => router.push("/blogs/blogdetails")}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
           {blogs.map((blog) => (
             <Card
               key={blog.id}

@@ -15,7 +15,7 @@ const CommentsAndStayUpdated = () => {
           className="w-full h-28 sm:h-32 border border-gray-300 rounded-lg p-3 sm:p-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
         />
         <div className="flex justify-end mt-3">
-          <button className="group relative bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white px-6 py-3 rounded-lg shadow-md w-fit mx-auto md:mx-0 text-sm sm:text-base overflow-hidden">
+          <button className="cursor-pointer group relative bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white px-6 py-3 rounded-lg shadow-md w-fit mx-auto md:mx-0 text-sm sm:text-base overflow-hidden">
             {/* Default State */}
             <span className="flex items-center transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
               Post
@@ -63,7 +63,7 @@ const CommentsAndStayUpdated = () => {
               placeholder="Your Email"
               className="flex-1 px-4 py-3 text-white placeholder-white bg-transparent outline-none"
             />
-            <button className="bg-purple-700 hover:bg-purple-800 px-6 py-3 font-medium text-white">
+            <button className="cursor-pointer bg-purple-700 hover:bg-purple-800 px-6 py-3 font-medium text-white">
               Subscribe
             </button>
           </div>

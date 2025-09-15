@@ -46,7 +46,7 @@ const AboutUs = () => {
 
         {/* Stats */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
-          <div className="p-6 border rounded-xl shadow-sm hover:shadow-md transition w-full text-center">
+          <div className="p-6 border rounded-xl shadow-[0_4px_12px_rgba(94,59,238,0.15)] transition w-full text-center">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#5E3BEE]">
               50K+
             </h3>
@@ -55,7 +55,7 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="p-6 border rounded-xl shadow-sm hover:shadow-md transition w-full text-center">
+          <div className="p-6 border rounded-xl shadow-[0_4px_12px_rgba(94,59,238,0.15)] transition w-full text-center">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#5E3BEE]">
               200+
             </h3>
@@ -64,7 +64,7 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="p-6 border rounded-xl shadow-sm hover:shadow-md transition w-full text-center">
+          <div className="p-6 border rounded-xl shadow-[0_4px_12px_rgba(94,59,238,0.15)] transition w-full text-center">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#5E3BEE]">
               95%
             </h3>
@@ -117,10 +117,10 @@ const AboutUs = () => {
           </h2>
 
           <div className="mb-6">
-            <span className="px-3 py-1 bg-[#5E3BEE]/10 text-[#5E3BEE] text-sm font-medium rounded-md">
+            <span className="px-3  py-3 bg-gray-100 border-l-2 border-[#5E3BEE] text-black text-sm font-semibold">
               Mission
             </span>
-            <p className="mt-2 text-gray-700 leading-relaxed">
+            <p className="mt-4 text-gray-700 leading-relaxed">
               To empower learners worldwide by providing accessible,
               high-quality education that fosters innovation, creativity, and
               professional growth.
@@ -128,10 +128,10 @@ const AboutUs = () => {
           </div>
 
           <div>
-            <span className="px-3 py-1 bg-[#5E3BEE]/10 text-[#5E3BEE] text-sm font-medium rounded-md">
+            <span className="px-3 py-3 bg-gray-100 border-l-2 border-[#5E3BEE] text-black text-sm font-semibold ">
               Vision
             </span>
-            <p className="mt-2 text-gray-700 leading-relaxed">
+            <p className="mt-4 text-gray-700 leading-relaxed">
               To become the most trusted platform for tech and design learning,
               shaping the workforce of tomorrow and enabling opportunities for
               everyone, everywhere.

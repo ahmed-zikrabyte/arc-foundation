@@ -144,18 +144,18 @@ const Testimonial = () => {
         </Swiper>
 
         {/* Custom Prev/Next Buttons */}
-        <div className="flex justify-center gap-6 mt-10">
+        <div className="flex cursor-pointer justify-center gap-6 mt-10">
           <button
             onClick={() => swiperRef.current?.slidePrev()}
             className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white shadow-lg hover:scale-110 transition"
           >
-            <span className="text-lg">‹</span>
+            <span className="text-[50px] mb-4">‹</span>
           </button>
           <button
             onClick={() => swiperRef.current?.slideNext()}
-            className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white shadow-lg hover:scale-110 transition"
+            className="cursor-pointer w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white shadow-lg hover:scale-110 transition"
           >
-            <span className="text-lg">›</span>
+            <span className="text-[50px] mb-4">›</span>
           </button>
         </div>
       </div>

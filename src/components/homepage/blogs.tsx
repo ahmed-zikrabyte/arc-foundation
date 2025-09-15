@@ -1,10 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 const Blogs = () => {
+  const router = useRouter();
   const blogs = [
     {
       id: 1,
@@ -51,16 +53,38 @@ const Blogs = () => {
   return (
     <section className="w-full overflow-x-hidden">
       {/* Top Gradient Background */}
+      {/* Top Gradient Background with Moving Circles */}
       <div
-        className="relative w-full text-white py-10 text-center bg-cover bg-center"
+        className="relative w-full text-white py-10 text-center bg-cover bg-center overflow-hidden"
         style={{ backgroundImage: "url('/homepage/blogs/Bllog.png')" }}
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gray-300/50"></div>
 
+        {/* Animated Circles */}
+        {/* Floating Circles Animation */}
+        <motion.div
+          className="absolute w-8 h-8 rounded-full bg-blue-300/30"
+          style={{ top: "12%", left: "15%" }}
+          animate={{ x: [0, 20, -20, 0], y: [0, -15, 15, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute w-16 h-16 rounded-full bg-blue-200/40"
+          style={{ bottom: "18%", left: "10%" }}
+          animate={{ x: [0, -25, 25, 0], y: [0, 20, -20, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute w-20 h-20 rounded-full bg-blue-300/30"
+          style={{ top: "20%", right: "12%" }}
+          animate={{ x: [0, 30, -30, 0], y: [0, -25, 25, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
+
         {/* Content */}
         <div className="relative z-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold">
             Our Latest Blogs
           </h2>
           <p className="text-sm sm:text-base md:text-lg mt-3 px-4 sm:px-10 md:px-20 lg:px-40">
@@ -88,8 +112,9 @@ const Blogs = () => {
                 whileInView="visible"
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.2 }}
+                onClick={() => router.push("/blogs/blogdetails")}
               >
-                <Card className="group relative w-full bg-[#ECECEC] rounded-xl overflow-hidden px-4 pt-6 pb-6 transition-all duration-500 hover:shadow-xl">
+                <Card className="group relative w-full bg-[#ECECEC] cursor-pointer rounded-xl overflow-hidden px-4 pt-6 pb-6 transition-all duration-500 hover:shadow-xl">
                   {/* Image */}
                   <div className="relative -mt-2 mb-2 overflow-hidden rounded-xl">
                     <Image
@@ -151,7 +176,10 @@ const Blogs = () => {
 
         {/* View All Button */}
         <div className="w-full flex justify-center mt-10">
-          <button className="group relative bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white px-6 py-3 rounded-lg shadow-md w-fit mx-auto md:mx-0 text-sm sm:text-base overflow-hidden">
+          <button
+            onClick={() => router.push("/blogs")}
+            className="group relative bg-gradient-to-r cursor-pointer from-[#5E3BEE] to-[#A855F7] text-white px-6 py-3 rounded-lg shadow-md w-fit mx-auto md:mx-0 text-sm sm:text-base overflow-hidden"
+          >
             {/* Default State */}
             <span className="flex items-center transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
               View all

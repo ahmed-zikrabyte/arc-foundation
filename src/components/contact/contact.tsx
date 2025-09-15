@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Contact = () => {
@@ -32,8 +33,39 @@ const Contact = () => {
       </div>
 
       {/* ✅ Contact Form Section */}
-      <div className="w-full  px-4 sm:px-6 md:px-10 lg:px-16  py-16 bg-white">
+      <div className=" relative w-full  px-4 sm:px-6 md:px-10 lg:px-16  py-16 bg-white">
         <div className="w-full mx-auto bg-gradient-to-br from-[#3071A9] via-[#3493E5] to-[#3493E5] rounded-2xl p-6 sm:p-10 lg:p-14 shadow-lg text-white grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <motion.div
+            className="absolute w-34 h-34 rounded-full border-20 border-blue-300/30"
+            style={{ top: "12%", left: "15%" }}
+            animate={{ x: [0, 40, -40, 0], y: [0, -30, 30, 0] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute w-32 h-32 rounded-full border-20 border-blue-200/40"
+            style={{ bottom: "18%", left: "10%" }}
+            animate={{ x: [0, -50, 50, 0], y: [0, 40, -40, 0] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute w-40 h-40 rounded-full border-20  border-blue-300/30"
+            style={{ top: "20%", right: "12%" }}
+            animate={{ x: [0, 60, -60, 0], y: [0, -50, 50, 0] }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute w-20 h-20 rounded-full border-10  border-blue-300/30"
+            style={{ bottom: "20%", right: "18%" }}
+            animate={{ x: [0, -40, 40, 0], y: [0, 30, -30, 0] }}
+            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+          />
+          {/* New thick circle */}
+          <motion.div
+            className="absolute w-28 h-28 rounded-full border-20  border-blue-300/30"
+            style={{ top: "40%", left: "45%" }}
+            animate={{ x: [0, 30, -30, 0], y: [0, -20, 20, 0] }}
+            transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
+          />
           {/* Left - Image + Contact Info */}
           <div className="space-y-6">
             {/* Image */}
@@ -110,8 +142,22 @@ const Contact = () => {
               </label>
 
               {/* Button */}
-              <button className="w-full sm:w-auto px-8 py-3 rounded-lg  bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white font-semibold hover:opacity-90 transition-all">
-                Send →
+              <button className="group cursor-pointer relative bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white px-6 py-3 rounded-lg shadow-md w-fit mx-auto md:mx-0 text-sm sm:text-base overflow-hidden">
+                {/* Default State */}
+                <span className="flex items-center transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
+                  Send
+                  <span className="ml-2 font-bold text-xl transition-all duration-500 ease-in-out group-hover:translate-x-10 group-hover:opacity-0">
+                    →
+                  </span>
+                </span>
+
+                {/* Hover State */}
+                <span className="flex items-center absolute left-6 top-3 translate-y-full opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+                  Send
+                  <span className="ml-2 text-xl font-bold -translate-x-10 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
+                    →
+                  </span>
+                </span>
               </button>
             </form>
           </div>
