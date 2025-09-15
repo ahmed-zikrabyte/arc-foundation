@@ -244,7 +244,7 @@ const Teams = () => {
         <div className="flex justify-center mt-10 gap-4 w-full">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="group relative bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white px-6 py-3 rounded-lg shadow-md w-fit text-sm sm:text-base overflow-hidden"
+            className="cursor-pointer group relative bg-gradient-to-r from-[#5E3BEE] to-[#A855F7] text-white px-6 py-3 rounded-lg shadow-md w-fit text-sm sm:text-base overflow-hidden"
           >
             <span className="flex items-center transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
               {showAll ? "Show Less" : "Load More"}
