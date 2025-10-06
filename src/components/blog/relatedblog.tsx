@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Bloglist = () => {
+  const router = useRouter();
   const blogs = [
     {
       id: 1,
@@ -49,7 +51,10 @@ const Bloglist = () => {
             exclusive interview with leaders
           </p>
         </div>
-        <button className="group relative bg-gradient-to-r w-[120px] sm:w-[200px] md:w[200px] lg:w-[200px] from-[#5E3BEE] to-[#A855F7] text-white px-5  sm:px-6 py-2 sm:py-3 rounded-lg shadow-md  mx-auto md:mx-0 text-xs sm:text-sm md:text-base overflow-hidden">
+        <button
+          onClick={() => router.push("/blogs")}
+          className="cursor-pointer group relative bg-gradient-to-r w-[120px] sm:w-[200px] md:w[200px] lg:w-[200px] from-[#5E3BEE] to-[#A855F7] text-white px-5  sm:px-6 py-2 sm:py-3 rounded-lg shadow-md  mx-auto md:mx-0 text-xs sm:text-sm md:text-base overflow-hidden"
+        >
           {/* Default State */}
           <span className="flex items-center transition-all duration-500 ease-in-out group-hover:-translate-y-full group-hover:opacity-0">
             Explore all
@@ -69,7 +74,10 @@ const Bloglist = () => {
       </div>
 
       {/* Blog Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 w-full">
+      <div
+        onClick={() => router.push("/blogs/blogdetails")}
+        className="cursor-pointer  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 w-full"
+      >
         {blogs.map((blog) => (
           <div
             key={blog.id}
